@@ -16,7 +16,7 @@ class UserService
 {
     
     constructor(){}
-    async getDetails(city='') {
+    async getWeatherDetails(city='') {
         let cityname = city.toLowerCase();
         await sql.connect(config);// Wait for the connection
         let request = new sql.Request();
@@ -30,7 +30,7 @@ class UserService
         }
     }
 
-    async getCityDetails(query="")
+    async getCitiesDetials(query="")
     {
         await sql.connect(config);// Wait for the connection
         let request = new sql.Request();
